@@ -7,7 +7,7 @@ Includes authentication, protected routes, animated transitions, user search, an
 
 ## 🚀 Live Demo
 
-🔗 [View Live Site](https://your-vercel-link.vercel.app)
+🔗 [View Live Site](https://Chandrika-s1313.github.io/user-dashboard)
 
 ---
 
@@ -22,7 +22,7 @@ Includes authentication, protected routes, animated transitions, user search, an
 - ✅ Framer Motion animations (pages + buttons)
 - ✅ Clean navbar & logout handling
 - ✅ Route-based navbar hiding (e.g., hidden on `/login`)
-- ✅ GitHub + Vercel deployment ready
+- ✅ GitHub + GitHub Pages deployment ready
 
 ---
 
@@ -43,7 +43,7 @@ Includes authentication, protected routes, animated transitions, user search, an
 - **Styling:** Bootstrap 5
 - **Routing:** React Router DOM
 - **Animations:** Framer Motion
-- **Deployment:** Vercel
+- **Deployment:** GitHub Pages
 - **State:** React Hooks (`useState`, `useEffect`)
 
 ---
