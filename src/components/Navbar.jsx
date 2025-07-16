@@ -13,6 +13,7 @@ function Navbar({ isLoggedIn, setIsLoggedIn }) {
     return (
         <nav style={{ marginBottom: "20px" }}>
             <Link to="/" style={{ marginRight: "10px" }}>Dashboard</Link>
+            <Link to="/settings">Settings</Link>
             <Link to="/user/101/alex">User</Link>
 
             {isLoggedIn && (

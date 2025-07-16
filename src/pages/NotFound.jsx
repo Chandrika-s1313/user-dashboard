@@ -1,9 +1,20 @@
 import React from "react";
 
-function Notfound(){
-    return(
-        <h2>Page Not Found</h2>
-    );
+import { motion } from "framer-motion";
+
+function NotFound() {
+  return (
+    <motion.div
+      className="container text-center mt-5"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.4 }}
+    >
+      <h1 className="text-danger display-1">404</h1>
+      <p className="lead">Oops! The page you're looking for doesn't exist.</p>
+    </motion.div>
+  );
 }
 
-export default Notfound;
+export default NotFound;
+

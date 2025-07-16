@@ -1,6 +1,7 @@
 import React, { use } from "react";
 import { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function Login({ isLoggedIn, setIsLoggedIn }) {
   const [email, setEmail] = useState("");
@@ -19,14 +20,19 @@ function Login({ isLoggedIn, setIsLoggedIn }) {
       setError("");
       navigate("/");
     } else {
-      setError("Invalid Credentials.Try again");
+      setError("Invalid Credentials. Try again.");
     }
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100">
+    <motion.div
+      className="d-flex justify-content-center align-items-center vh-100"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="border p-4 rounded shadow" style={{ minWidth: "400px" }}>
-        <h2 className="text-center mb-4">Welcome to the Simple User Dashboard</h2>
+        <h2 className="text-center mb-4">Welcome to the SSimple User Dashboard </h2>
         <h3 className="text-center mb-4" style={{color:"red"}}>Login</h3>
         <form onSubmit={handleLogin}>
           <div className="mb-3">
@@ -34,7 +40,6 @@ function Login({ isLoggedIn, setIsLoggedIn }) {
             <input
               type="email"
               className="form-control"
-              placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -45,17 +50,23 @@ function Login({ isLoggedIn, setIsLoggedIn }) {
             <input
               type="password"
               className="form-control"
-              placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
           {error && <p className="text-danger">{error}</p>}
-          <button type="submit" className="btn btn-primary w-100">Login</button>
+          <motion.button
+            type="submit"
+            className="btn btn-primary w-100"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Login
+          </motion.button>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
